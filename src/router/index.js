@@ -1,37 +1,37 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Users from "../views/Users.vue";
-import Posts from "../views/Posts.vue";
-import Photos from "../views/Photos.vue";
-import Post from "../views/Post.vue";
-import PostsIndex from "../views/PostsIndex.vue";
+import UsersPage from "../views/UsersPage.vue";
+import PostsPage from "../views/PostsPage.vue";
+import PhotosPage from "../views/PhotosPage.vue";
+import PostPage from "../views/PostPage.vue";
+import PostsIndexPage from "../views/PostsIndexPage.vue";
 const routes = [
   {
     path: "/",
-    name: "Users",
-    component: Users,
+    name: "UsersPage",
+    component: UsersPage,
   },
   {
     path: "/posts",
-    component: PostsIndex,
+    component: PostsIndexPage,
     children: [
       // /posts
       {
         path: "",
-        name: "Posts",
-        component: Posts,
+        name: "PostsPage",
+        component: PostsPage,
       },
       // /posts/2
       {
         path: ":id",
-        name: "Post",
-        component: Post,
+        name: "PostPage",
+        component: PostPage,
       },
     ],
   },
   {
     path: "/photos",
-    name: "Photos",
-    component: Photos,
+    name: "PhotosPage",
+    component: PhotosPage,
   },
 ];
 

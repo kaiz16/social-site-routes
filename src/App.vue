@@ -1,12 +1,16 @@
 <template>
   <div id="nav">
     <router-link to="/">Users</router-link> |
-    <router-link to="/posts">Posts</router-link> | 
+    <router-link to="/posts">Posts</router-link> |
     <router-link to="/photos">Photos</router-link>
   </div>
   <router-view/>
 </template>
-
+<script>
+export default {
+  
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
